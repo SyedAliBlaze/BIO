@@ -1,32 +1,20 @@
-/* Reset and basic styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Load custom font using @font-face */
-@font-face {
-    font-family: 'Stark';
-    src: url('fonts/Stark-Italic.otf') format('opentype');
-    font-weight: 400;
-    font-style: italic;
-}
-
-/* Apply font and basic styles */
 body {
-    font-family: 'Stark', sans-serif;
-    background-color: #021656;
+    font-family: 'Stark', sans-serif; /* A modern, futuristic font */
+    background-color: #021656; /* Updated background color */
     color: white;
     text-align: center;
 }
 
-/* Container styling */
 .container {
     padding: 20px;
 }
 
-/* Profile photo styling */
 .profile-photo {
     width: 250px;
     height: 250px;
@@ -41,15 +29,14 @@ body {
     border-color: #67C7EB;
 }
 
-/* Username styling */
 .username {
-    font-size: 3.5rem;
+    font-size: 3.5rem; /* Increased font size */
     margin-bottom: 10px;
     color: #FF0000;
+    font-family: 'Stark', sans-serif;
     letter-spacing: 2px;
 }
 
-/* Social icons styling */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -67,54 +54,81 @@ body {
     transform: scale(1.2);
 }
 
-/* Links section */
+.social-icons a img.email-icon {
+    transition: opacity 0.3s; /* Smooth transition */
+}
+
+.social-icons a img.email-icon {
+    content: url('icons/mail1.png'); /* Default image */
+}
+
+.social-icons a:hover img.email-icon {
+    content: url('icons/email1.png'); /* Image on hover */
+}
+
 .links {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    align-items: center;
+    align-items: center; /* Center items */
 }
 
 .link {
-    background-color: #FF0000;
+    background-color: #FF0000; /* Red background */
     color: white;
-    padding: 15px 40px;
-    border-radius: 40px;
+    padding: 15px 40px; /* Increase padding for a wider feel */
+    border-radius: 40px; /* Rounded corners */
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Increased font size */
     transition: background-color 0.3s, box-shadow 0.3s;
     display: flex;
     align-items: center;
     gap: 15px;
-    width: 95%;
-    max-width: 700px;
-    text-align: center;
+    width: 95%; /* Make the box take up more width */
+    max-width: 700px; /* Increased max-width for wider boxes */
+    text-align: center; /* Ensure text is centered */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    justify-content: space-between;
-    position: relative;
+    justify-content: space-between; /* Adjust alignment */
+    position: relative; /* Needed for centering */
 }
 
 .link img.icon {
-    width: 40px;
+    width: 40px; /* Icon size to match */
     height: 40px;
+    border-radius: 0; /* No rounding */
+    flex-shrink: 0; /* Prevent the icon from shrinking */
 }
 
 .link .text {
     flex-grow: 1;
-    text-align: center;
-    position: absolute;
+    text-align: center; /* Center the text */
+    position: absolute; /* Absolute positioning to center the text */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Center horizontally */
 }
 
 .link:hover {
-    background-color: #FFD700;
+    background-color: #FFD700; /* Gold background on hover */
     box-shadow: 0 0 10px #FFD700;
+}
+
+.link img.email-link-icon {
+    width: 40px; /* Icon size to match */
+    height: 40px;
+    transition: opacity 0.3s; /* Smooth transition */
+}
+
+.link img.email-link-icon {
+    content: url('icons/mail2.png'); /* Default image */
+}
+
+.link:hover img.email-link-icon {
+    content: url('icons/email2.png'); /* Image on hover */
 }
 
 /* Modal styling */
 .modal {
-    display: none;
+    display: none; /* Hidden by default */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -122,7 +136,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
 }
 
 .modal-content {
@@ -137,10 +151,15 @@ body {
 }
 
 .close {
-    color: white;
-    font-size: 35px;
     position: absolute;
     top: 20px;
-    right: 25px;
+    right: 30px;
+    font-size: 40px;
+    color: #ffffff;
     cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #FFD700;
 }
