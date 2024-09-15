@@ -54,6 +54,18 @@ body {
     transform: scale(1.2);
 }
 
+.social-icons a img.email-icon {
+    transition: opacity 0.3s; /* Smooth transition */
+}
+
+.social-icons a img.email-icon {
+    content: url('icons/mail1.png'); /* Default image */
+}
+
+.social-icons a:hover img.email-icon {
+    content: url('icons/email1.png'); /* Image on hover */
+}
+
 .links {
     display: flex;
     flex-direction: column;
@@ -99,19 +111,19 @@ body {
     background-color: #FFD700; /* Gold background on hover */
     box-shadow: 0 0 10px #FFD700;
 }
+
 .link img.email-link-icon {
     width: 40px; /* Icon size to match */
     height: 40px;
-    transition: transform 0.3s;
+    transition: opacity 0.3s; /* Smooth transition */
 }
 
-.link img.email-link-icon:hover {
-    content: url('email2.png'); /* Switch to email2.png on hover */
+.link img.email-link-icon {
+    content: url('icons/mail2.png'); /* Default image */
 }
 
-
-.social-icons a img.email-icon:hover {
-    content: url('email1.png'); /* Change the icon to email1.png */
+.link:hover img.email-link-icon {
+    content: url('icons/email2.png'); /* Image on hover */
 }
 
 /* Modal styling */
@@ -141,21 +153,13 @@ body {
 .close {
     position: absolute;
     top: 20px;
-    right: 35px;
-    color: #fff;
+    right: 30px;
     font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
+    color: #ffffff;
     cursor: pointer;
+    transition: color 0.3s;
 }
 
-.close:hover,
-.close:focus {
-    color: #bbb;
-}
-
-/* Add animation for modal */
-@keyframes zoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
+.close:hover {
+    color: #FFD700;
 }
