@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+/* Load custom font using @font-face */
+@font-face {
+    font-family: 'Stark';
+    src: url('fonts/Stark_Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
 body {
     font-family: 'Stark', sans-serif; /* A modern, futuristic font */
     background-color: #021656; /* Updated background color */
