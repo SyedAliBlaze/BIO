@@ -2,3 +2,5 @@ COLOR CODE
 BLUE 67C7EB
 GOLD FFD700
 FLATICON
+<a href="https://www.flaticon.com/free-icons/mail" title="mail icons">Mail icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/email" title="email icons">Email icons created by Smashicons - Flaticon</a>

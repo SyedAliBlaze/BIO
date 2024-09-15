@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* A modern, futuristic font */
+    font-family: 'Stark', sans-serif; /* A modern, futuristic font */
     background-color: #021656; /* Updated background color */
     color: white;
     text-align: center;
@@ -16,23 +16,24 @@ body {
 }
 
 .profile-photo {
-    width: 300px; /* Increased width */
-    height: 300px; /* Increased height */
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     border: 5px solid #FFD700; /* Gold border */
     margin-bottom: 20px;
-    transition: border-color 0.3s; /* Smooth transition for border color change */
+    transition: border-color 0.3s;
+    cursor: pointer;
 }
 
 .profile-photo:hover {
-    border-color: #67C7EB; /* Blue border on hover */
+    border-color: #67C7EB;
 }
 
 .username {
-    font-size: 2.5rem;
+    font-size: 3.5rem; /* Increased font size */
     margin-bottom: 10px;
-    color: #FF0000; /* Iron Man's red */
-    font-family: 'Oxanium', sans-serif; /* Futuristic look */
+    color: #FF0000;
+    font-family: 'Stark', sans-serif;
     letter-spacing: 2px;
 }
 
@@ -44,8 +45,8 @@ body {
 }
 
 .social-icons a img {
-    width: 40px; /* Default width */
-    height: 40px; /* Default height */
+    width: 40px;
+    height: 40px;
     transition: transform 0.3s;
 }
 
@@ -57,29 +58,104 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    align-items: center; /* Center items */
 }
 
 .link {
     background-color: #FF0000; /* Red background */
     color: white;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 15px 40px; /* Increase padding for a wider feel */
+    border-radius: 40px; /* Rounded corners */
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Increased font size */
     transition: background-color 0.3s, box-shadow 0.3s;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    gap: 15px;
+    width: 95%; /* Make the box take up more width */
+    max-width: 700px; /* Increased max-width for wider boxes */
+    text-align: center; /* Ensure text is centered */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    justify-content: space-between; /* Adjust alignment */
+    position: relative; /* Needed for centering */
 }
 
 .link img.icon {
-    width: 30px;
-    height: 30px;
-    border-radius: 0; /* Square icons */
+    width: 40px; /* Icon size to match */
+    height: 40px;
+    border-radius: 0; /* No rounding */
+    flex-shrink: 0; /* Prevent the icon from shrinking */
+}
+
+.link .text {
+    flex-grow: 1;
+    text-align: center; /* Center the text */
+    position: absolute; /* Absolute positioning to center the text */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
 }
 
 .link:hover {
-    background-color: #FFD700; /* Gold on hover */
+    background-color: #FFD700; /* Gold background on hover */
     box-shadow: 0 0 10px #FFD700;
+}
+.link img.email-link-icon {
+    width: 40px; /* Icon size to match */
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.link img.email-link-icon:hover {
+    content: url('email2.png'); /* Switch to email2.png on hover */
+}
+
+
+.social-icons a img.email-icon:hover {
+    content: url('email1.png'); /* Change the icon to email1.png */
+}
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 60%;
+    max-width: 700px;
+}
+
+.modal-content:hover {
+    transform: scale(1.05);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+}
+
+/* Add animation for modal */
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
 }
