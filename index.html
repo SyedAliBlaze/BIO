@@ -1,50 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Link Page</title>
+    <title>System Status: Syed Ali N</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Stark+Italic:wght@400&display=swap">
 </head>
+
 <body>
     <div class="container">
-        <div class="profile">
+
+        <!-- System Window Panel for Profile -->
+        <div class="system-window profile">
+            <div class="system-label">Player Stats</div>
             <img src="icons/pro_pic.jpg" alt="Profile Photo" class="profile-photo" id="profile-photo">
             <h1 class="username">Syed Ali N</h1>
-            <div class="social-icons">
-                <a href="mailto:blazingsyedali451@gmail.com">
-                    <img src="icons/mail1.png" alt="Email" class="icon email-icon">
-                </a>
-                <a href="https://www.instagram.com/mr_s_a_blaze" target="_blank">
-                    <img src="icons/instagram_icon.png" alt="Instagram" class="icon">
-                </a>
-                <a href="https://in.linkedin.com/in/syed-ali-blaze-663195290" target="_blank">
-                    <img src="icons/linkedin_icon.png" alt="LinkedIn" class="icon">
-                </a>
-                <a href="https://github.com/SyedAliBlaze" target="_blank">
-                    <img src="icons/github_icon.png" alt="GitHub" class="icon">
-                </a>
+
+            <div class="stats-block">
+                <div class="level-container" id="level-trigger">
+                    <div class="level-number" id="player-level">18</div>
+                    <div class="level-label">LEVEL</div>
+                </div>
+                <div class="stats-details">
+                    <div class="stat-row">
+                        <span class="stat-label">JOB:</span>
+                        <span class="stat-value">NONE</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">TITLE:</span>
+                        <span class="stat-value">NONE</span>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="links">
-            <a href="mailto:blazingsyedali451@gmail.com" class="link">
-                <img src="icons/mail2.png" alt="Email" class="icon email-link-icon">
-                <span class="text">Gmail</span>
-            </a>
-            <a href="https://www.instagram.com/mr_s_a_blaze" class="link">
-                <img src="icons/instagram_icon2.png" alt="Instagram" class="icon">
-                <span class="text">Instagram</span>
-            </a>
-            <a href="https://in.linkedin.com/in/syed-ali-blaze-663195290" class="link">
-                <img src="icons/linkedin_icon2.png" alt="LinkedIn" class="icon">
-                <span class="text">LinkedIn</span>
-            </a>
-            <a href="https://github.com/SyedAliBlaze" class="link">
-                <img src="icons/github_icon2.png" alt="GitHub" class="icon">
-                <span class="text">GitHub</span>
-            </a>
+        <!-- System Window Panel for Links -->
+        <div class="system-window links-panel">
+            <div class="system-label">Available Quests</div>
+            <div class="links">
+                <a href="mailto:blazingsyedali451@gmail.com" class="link">
+                    <img src="icons/mail1.png" alt="Email" class="icon email-link-icon">
+                    <span class="text">Gmail</span>
+                </a>
+                <a href="https://www.instagram.com/mr_s_a_blaze" class="link">
+                    <img src="icons/instagram_icon.png" alt="Instagram" class="icon">
+                    <span class="text">Instagram</span>
+                </a>
+                <a href="https://in.linkedin.com/in/syed-ali-blaze-663195290" class="link">
+                    <img src="icons/linkedin_icon.png" alt="LinkedIn" class="icon">
+                    <span class="text">LinkedIn</span>
+                </a>
+                <a href="https://github.com/SyedAliBlaze" class="link">
+                    <img src="icons/github_icon.png" alt="GitHub" class="icon">
+                    <span class="text">GitHub</span>
+                </a>
+            </div>
         </div>
 
         <!-- Modal for expanded image -->
@@ -52,8 +64,52 @@
             <span class="close" id="close-modal">&times;</span>
             <img class="modal-content" id="expanded-img" src="">
         </div>
+
+        <!-- Modal for Level Up Countdown -->
+        <div class="modal" id="countdown-modal">
+            <span class="close" id="close-countdown">&times;</span>
+            <div class="modal-content countdown-content">
+                <h2 class="countdown-title">Time Until Next Level Upgrade</h2>
+                <div class="countdown-timer">
+                    <div class="time-block">
+                        <div id="cd-mo">00</div>
+                        <div class="label">MONTHS</div>
+                    </div><span class="colon">:</span>
+                    <div class="time-block">
+                        <div id="cd-d">00</div>
+                        <div class="label">DAYS</div>
+                    </div><span class="colon">:</span>
+                    <div class="time-block">
+                        <div id="cd-h">00</div>
+                        <div class="label">HOURS</div>
+                    </div><span class="colon">:</span>
+                    <div class="time-block">
+                        <div id="cd-m">00</div>
+                        <div class="label">MINS</div>
+                    </div><span class="colon">:</span>
+                    <div class="time-block">
+                        <div id="cd-s">00</div>
+                        <div class="label">SECS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Welcome Alert Modal -->
+        <div class="welcome-overlay" id="welcome-overlay">
+            <div class="welcome-modal" id="welcome-modal">
+                <div class="welcome-header">
+                    <span class="info-icon">!</span> ALERT
+                </div>
+                <div class="welcome-body">
+                    [WELCOME, <span class="player-text">PLAYER.</span>]
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script src="scripts.js"></script>
 </body>
+
 </html>
