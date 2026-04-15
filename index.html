@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System Status: Syed Ali N</title>
+    <title>Syed Ali N - Contact Info</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Stark+Italic:wght@400&display=swap">
 </head>
@@ -25,12 +25,12 @@
                 </div>
                 <div class="stats-details">
                     <div class="stat-row">
-                        <span class="stat-label">JOB:</span>
-                        <span class="stat-value">NONE</span>
+                        <span class="stat-label">CallSign :</span>
+                        <span class="stat-value">Blaze</span>
                     </div>
                     <div class="stat-row">
-                        <span class="stat-label">TITLE:</span>
-                        <span class="stat-value">NONE</span>
+                        <span class="stat-label">Status :</span>
+                        <span class="stat-value">Active</span>
                     </div>
                 </div>
             </div>
@@ -56,13 +56,51 @@
                     <img src="icons/github_icon.png" alt="GitHub" class="icon">
                     <span class="text">GitHub</span>
                 </a>
+                <a href="https://syedaliblaze.github.io/MrBlaze/" class="link">
+                    <img src="icons/portfolio_icon.png" alt="Portfolio" class="icon">
+                    <span class="text">Portfolio</span>
+                </a>
             </div>
         </div>
 
         <!-- Modal for expanded image -->
         <div class="modal" id="image-modal">
-            <span class="close" id="close-modal">&times;</span>
-            <img class="modal-content" id="expanded-img" src="">
+            <div class="modal-wrapper" id="modal-wrapper">
+                <div class="close-container" id="close-modal">
+                    <span class="close-icon">&times;</span>
+                </div>
+                <div class="modal-body-container">
+                    <div class="image-section">
+                        <img class="modal-content-img" id="expanded-img" src="">
+                    </div>
+                    <div class="details-section">
+                        <div class="detail-item">
+                            <label>FULL NAME</label>
+                            <span class="detail-value">SYED ALI N</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>CALLSIGN</label>
+                            <span class="detail-value">BLAZE</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>AGE</label>
+                            <span class="detail-value" id="modal-age">23</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>STATUS</label>
+                            <span class="detail-value">ACTIVE</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>GENDER</label>
+                            <span class="detail-value">MALE</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>NATIONALITY / ORIGIN</label>
+                            <span class="detail-value">INDIA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Modal for Level Up Countdown -->

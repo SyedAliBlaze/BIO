@@ -1,27 +1,38 @@
 // Get the modal
 var modal = document.getElementById("image-modal");
+var modalWrapper = document.getElementById("modal-wrapper");
 
 // Get the image and insert it inside the modal
 var img = document.getElementById("profile-photo");
 var modalImg = document.getElementById("expanded-img");
+var modalAge = document.getElementById("modal-age");
+var playerLevel = document.getElementById("player-level");
 
 if(img) {
     img.onclick = function() {
         modal.style.display = "flex";
-        modalImg.src = this.src;
-        modalImg.classList.remove('welcome-disappear');
-        modalImg.classList.add('welcome-appear');
+        if (modalImg) modalImg.src = this.src;
+        if (modalAge && playerLevel) modalAge.textContent = playerLevel.textContent;
+        
+        if (modalWrapper) {
+            modalWrapper.classList.remove('welcome-disappear');
+            modalWrapper.classList.add('welcome-appear');
+        }
     }
 }
 
-// Get the <span> element that closes the modal
-var close = document.getElementById("close-modal");
+// Get the close element that closes the modal
+var closeContainer = document.getElementById("close-modal");
 
-if(close) {
-    close.onclick = function() {
-        modalImg.classList.remove('welcome-appear');
-        modalImg.classList.add('welcome-disappear');
-        setTimeout(() => { modal.style.display = "none"; }, 300);
+if(closeContainer) {
+    closeContainer.onclick = function() {
+        if (modalWrapper) {
+            modalWrapper.classList.remove('welcome-appear');
+            modalWrapper.classList.add('welcome-disappear');
+            setTimeout(() => { modal.style.display = "none"; }, 300);
+        } else {
+            modal.style.display = "none";
+        }
     }
 }
 
@@ -203,11 +214,11 @@ if(closeCountdown) {
 
 // Override global window.onclick to manage all modals dynamically
 window.onclick = function(event) {
-    // modal is the original image-modal from top of file
+    // modal is the image-modal
     if (typeof modal !== 'undefined' && event.target == modal) {
-        if(modalImg) {
-            modalImg.classList.remove('welcome-appear');
-            modalImg.classList.add('welcome-disappear');
+        if(modalWrapper) {
+            modalWrapper.classList.remove('welcome-appear');
+            modalWrapper.classList.add('welcome-disappear');
         }
         setTimeout(() => { modal.style.display = "none"; }, 300);
     }
